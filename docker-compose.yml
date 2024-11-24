@@ -20,7 +20,7 @@ services:
       unless-stopped
 
   node-exporter:
-    image: quay.io/prometheus/node-exporter:v1.8.2
+    image: prom/node-exporter:v1.8.2
     ports:
       - 9100:9100
     volumes:
