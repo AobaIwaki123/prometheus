@@ -15,6 +15,7 @@ $ make up # docker-compose up
 $ make down # docker-compose down
 ```
 
+- [監視対象サーバーに設置するExporter](./exporters/README.md)
 ## Grafana Dashboard List
 
 - Node Exporter Full: https://grafana.com/grafana/dashboards/1860-node-exporter-full/
