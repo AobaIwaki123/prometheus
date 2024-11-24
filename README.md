@@ -7,6 +7,18 @@ $ sudo make setup-docker-repo
 $ sudo make install-docker
 ```
 
+## Quic Start
+
+```sh
+$ make create-volumes # docker volumeを作成
+$ make up # docker-compose up
+$ make down # docker-compose down
+```
+
+## Grafana Dashboard List
+
+- Node Exporter Full: https://grafana.com/grafana/dashboards/1860-node-exporter-full/
+
 ## Getting Started With Loki
 
 - [Getting Started with Loki](./evaluate-loki/README.md)
