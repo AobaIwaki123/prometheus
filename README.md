@@ -6,3 +6,7 @@
 $ sudo make setup-docker-repo
 $ sudo make install-docker
 ```
+
+## Getting Started With Loki
+
+- [Getting Started with Loki](./evaluate-loki/README.md)
