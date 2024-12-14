@@ -6,6 +6,12 @@ tasks:
     cmds:
       - task --list
 
+  clean-branch:
+    desc: ローカルブランチを削除
+    cmds:
+      - git remote prune origin
+      - git branch | grep -v "main" | grep -v "*" | xargs git branch -D
+
   create-volumes:
     desc: Prometheus, Grafana用のDocker Volumeを作成
     cmds:
