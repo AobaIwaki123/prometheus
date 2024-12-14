@@ -15,7 +15,17 @@ $ make up # docker-compose up
 $ make down # docker-compose down
 ```
 
+- update prometheus.yml without stopping server
+
+```sh
+$ vim prometheus/prometheus.yml
+# configure something...
+$ make reload
+```
+
+## Exporters
 - [監視対象サーバーに設置するExporter](./exporters/README.md)
+
 ## Grafana Dashboard List
 
 - Node Exporter Full: https://grafana.com/grafana/dashboards/1860-node-exporter-full/
