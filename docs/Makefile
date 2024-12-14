@@ -38,20 +38,3 @@ install-docker:
 	@systemctl status docker
 
 	@echo "========== Docker installation completed successfully! =========="
-
-create-volumes:
-	@docker volume create metrics_data
-	@docker volume create grafana_data
-
-up:
-	@docker compose up -d
-
-down:
-	@docker compose down
-
-clean-restart:
-	@docker compose down
-	@docker compose up -d
-
-reload:
-	@curl -X POST localhost:9090/-/reload

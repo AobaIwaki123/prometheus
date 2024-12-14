@@ -1,18 +1,17 @@
 # PrometheusとGrafana Eco Systemを用いたオンプレサーバー監視基盤
 
-## 事前準備
+## Versions
 
-```sh
-$ sudo make setup-docker-repo
-$ sudo make install-docker
-```
+- docker: 27.3.1
+- prometheus: 3.0.0
+- grafana: 11.3.1
 
 ## Quic Start
 
 ```sh
-$ make create-volumes # docker volumeを作成
-$ make up # docker-compose up
-$ make down # docker-compose down
+$ task create-volumes # docker volumeを作成
+$ task up # docker-compose up
+$ task down # docker-compose down
 ```
 
 - update prometheus.yml without stopping server
@@ -20,10 +19,15 @@ $ make down # docker-compose down
 ```sh
 $ vim prometheus/prometheus.yml
 # configure something...
-$ make reload
+$ task reload
 ```
 
+## Other Docs
+
+- [Install Docker](./docs/install_docker.md)
+
 ## Exporters
+
 - [監視対象サーバーに設置するExporter](./exporters/README.md)
 
 ## Grafana Dashboard List

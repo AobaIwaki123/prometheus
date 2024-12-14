@@ -1,0 +1,46 @@
+version: '3'
+
+tasks:
+  help:
+    desc: 利用可能なタスクの一覧を表示
+    cmds:
+      - task --list
+
+  create-volumes:
+    desc: Prometheus, Grafana用のDocker Volumeを作成
+    cmds:
+      - docker volume create metrics_data
+      - docker volume create grafana_data
+    silent: true
+
+  up:
+    desc: Prometheus, Grafanaを起動
+    cmds:
+      - docker-compose up -d
+    silent: true
+  
+  down:
+    desc: Prometheus, Grafanaを停止
+    cmds:
+      - docker-compose down
+    silent: true
+  
+  logs:
+    desc: Prometheus, Grafanaのログを表示
+    cmds:
+      - docker-compose logs -f
+    silent: true
+  
+  restart:
+    desc: Prometheus, Grafanaを再起動
+    cmds:
+      - task: down
+      - task: up
+    silent: true
+
+  reload:
+    desc: Prometheusの設定をリロード
+    cmds:
+      - curl -X POST localhost:9090/-/reload
+    silent: true
+
