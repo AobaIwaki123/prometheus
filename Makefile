@@ -52,3 +52,6 @@ down:
 clean-restart:
 	@docker compose down
 	@docker compose up -d
+
+reload:
+	@curl -X POST localhost:9090/-/reload
