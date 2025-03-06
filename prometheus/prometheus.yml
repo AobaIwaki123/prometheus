@@ -21,3 +21,13 @@ scrape_configs:
         - /etc/prometheus/node-exporter/pve202.yml
         - /etc/prometheus/node-exporter/pve203.yml
 
+  - job_name: 'proxmox'
+    static_configs:
+      - targets: [ '192.168.11.201:9221' ]  # exporter が動いているホスト
+    metrics_path: /pve
+    params:
+      target: [ 
+        "192.168.11.201",
+        "192.168.11.202",
+        "192.168.11.203"
+         ]
